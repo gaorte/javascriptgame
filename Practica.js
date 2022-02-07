@@ -4,18 +4,21 @@ var opcion3 = "Tijeras";
 var maquina = Math.random();
 
 
-function asignacion(){
-    if ( maquina<0.333333333333333) {
-        maquina = opcion1;
-    } 
-    else if(maquina<0.666666666666666 && maquina>0.333333333333333){
-        maquina=opcion2;
-    }
-    else {
-        maquina=opcion3;
-    }
-    }
-    function maquinaVshumano(humano) {
+ function juego(humano){  // apoyado en el metodo math.random dependiendo del resultado aleatorio se asigna  valores piedra papel y tijeras
+
+       if ( maquina<0.333333333333333) {
+        maquina = "Piedra";
+          } 
+         else if(maquina<0.666666666666666 && maquina>0.333333333333333){
+           maquina = "Papel";
+         }
+          else {
+           maquina =  "Tijeras";
+            }
+          console.log("Tu elegiste " + humano )
+          console.log("Maquina eligio " + maquina )
+    
+    
            if (maquina===humano){
         
             console.log("Tu elegiste lo mismo que la maquina... es un empate"); 
@@ -35,5 +38,7 @@ function asignacion(){
                           } else {
                            console.log("Gana Maquina"); 
                           }
-
+        
+    
+                          
     }
